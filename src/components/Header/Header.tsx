@@ -7,7 +7,7 @@ export default function Header() {
     <S.Header>
       <S.Container>
         <S.Title>Shopping</S.Title>
-        <S.ContainerButtons>
+        <S.ButtonsContainer>
           <S.LoginButton>
             Login
             <FiLogIn />
@@ -15,7 +15,7 @@ export default function Header() {
           <S.CartButton>
             <FiShoppingCart />
           </S.CartButton>
-        </S.ContainerButtons>
+        </S.ButtonsContainer>
       </S.Container>
     </S.Header>
   );

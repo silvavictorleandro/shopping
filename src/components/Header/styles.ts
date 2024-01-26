@@ -18,7 +18,7 @@ export const Title = styled.h1`
   font-weight: 500;
 `;
 
-export const ContainerButtons = styled.div`
+export const ButtonsContainer = styled.div`
   display: flex;
   gap: 1rem;
 `;
