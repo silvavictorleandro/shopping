@@ -1,17 +1,21 @@
-import ImgCard from "../../img/imgTest.jpg";
+import { Product } from "../ProductList/ProductList";
 
 import * as S from "./styles";
 
-export default function ProductCard() {
+interface ProductCardProps {
+  product: Product;
+}
+
+export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
   return (
     <S.Card>
-      <S.Img src={ImgCard} />
-      <S.Title>Mens Casual Premium Slim Fit T-Shirts</S.Title>
+      <S.Img src={product.image} />
+      <S.Title>{product.title}</S.Title>
       <S.InfoContainer>
-        <S.Rating>4.1</S.Rating>
-        <S.Price>$ 22.30</S.Price>
+        <S.Rating>{product.rating.rate}</S.Rating>
+        <S.Price>$ {product.price}</S.Price>
       </S.InfoContainer>
       <S.Button>Adicionar ao carrinho</S.Button>
     </S.Card>
   );
-}
+};

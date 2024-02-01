@@ -2,7 +2,7 @@ import { FiLogIn, FiLogOut, FiShoppingCart } from "react-icons/fi";
 
 import * as S from "./styles";
 
-export default function Header() {
+export const Header: React.FC = () => {
   return (
     <S.Header>
       <S.Container>
@@ -19,4 +19,4 @@ export default function Header() {
       </S.Container>
     </S.Header>
   );
-}
+};

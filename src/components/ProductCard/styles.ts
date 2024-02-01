@@ -2,6 +2,8 @@ import styled from "styled-components";
 
 export const Card = styled.article`
   background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
   padding: 1.2rem;
   width: 300px;
 
