@@ -1,5 +1,9 @@
 import styled from "styled-components";
 
+interface AuthButtonProps {
+  isLogged: boolean;
+}
+
 export const Header = styled.header`
   background-color: #3b3b58;
 `;
@@ -24,15 +28,15 @@ export const ButtonsContainer = styled.div`
   gap: 1rem;
 `;
 
-export const LoginButton = styled.button`
+export const AuthButton = styled.button<AuthButtonProps>`
   align-items: center;
-  background-color: green;
+  background-color: ${(props) => (props.isLogged ? "red" : "green")};
   border: none;
   border-radius: 5px;
   color: white;
   display: flex;
-  gap: 0.3rem;
   font-weight: 500;
+  gap: 0.3rem;
   height: 30px;
   padding: 0 1rem;
 `;

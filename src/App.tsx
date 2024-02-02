@@ -1,19 +1,16 @@
+import { Provider } from "react-redux";
+import { store } from "./redux/store";
 import { Header } from "./components/Header/Header";
-import { ProductCard } from "./components/ProductCard/ProductCard";
 import { ProductList } from "./components/ProductList/ProductList";
 
 import { GlobalStyles } from "./styles/GlobalStyles";
 
-function App() {
+export default function App() {
   return (
-    <>
+    <Provider store={store}>
       <Header />
-
       <ProductList />
-
       <GlobalStyles />
-    </>
+    </Provider>
   );
 }
-
-export default App;
