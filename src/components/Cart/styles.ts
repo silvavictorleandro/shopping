@@ -16,3 +16,15 @@ export const Container = styled.aside<ShowCartProps>`
 `;
 
 export const Title = styled.h2``;
+
+export const ProductContainer = styled.ul`
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1rem;
+`;
+
+export const ProductItem = styled.li`
+  list-style-type: none;
+`;
