@@ -3,7 +3,6 @@ import styled from "styled-components";
 interface AuthButtonProps {
   isLogged: boolean;
 }
-
 export const Header = styled.header`
   background-color: #3b3b58;
 `;
@@ -14,7 +13,7 @@ export const Container = styled.div`
   height: 60px;
   justify-content: space-between;
   margin: 0 auto;
-  max-width: 1024px;
+  max-width: 768px;
 `;
 
 export const Title = styled.h1`
