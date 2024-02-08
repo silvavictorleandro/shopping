@@ -7,7 +7,7 @@ export const GlobalStyles = createGlobalStyle`
     padding: 0;
   }
 
-  body, button {
+  body {
     background-color: #f7f7f7;
     font-family: "Poppins", sans-serif;
   }

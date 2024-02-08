@@ -52,6 +52,7 @@ export const Button = styled.button<ButtonProps>`
   border: none;
   border-radius: 5px;
   color: white;
+  font-family: "Poppins", sans-serif;
   font-size: 0.8rem;
   height: 40px;
   padding: 0 1.5rem;
