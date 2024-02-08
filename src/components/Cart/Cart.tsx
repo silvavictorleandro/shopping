@@ -4,12 +4,12 @@ import { TiDelete } from "react-icons/ti";
 import * as S from "./styles";
 import { removeProduct } from "../../redux/Cart/cartSlice";
 
-interface CartProps {
-  showCart: boolean;
-}
-
-export const Cart: React.FC<CartProps> = ({ showCart }) => {
+export const Cart: React.FC = () => {
   const { cart } = useSelector(
+    (rootReducer: RootReducer) => rootReducer.cartReducer
+  );
+
+  const { showCart } = useSelector(
     (rootReducer: RootReducer) => rootReducer.cartReducer
   );
 

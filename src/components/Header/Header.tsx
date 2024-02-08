@@ -4,12 +4,9 @@ import * as S from "./styles";
 import { useDispatch, useSelector } from "react-redux";
 import { RootReducer } from "../../redux/root-reducer";
 import { login, logout } from "../../redux/User/userSlice";
-import { useState } from "react";
-import { Cart } from "../Cart/Cart";
+import { toggleCartVisibility } from "../../redux/Cart/cartSlice";
 
 export const Header: React.FC = () => {
-  const [showCart, setShowCart] = useState(false);
-
   const { user } = useSelector(
     (rootReducer: RootReducer) => rootReducer.userReducer
   );
@@ -31,6 +28,10 @@ export const Header: React.FC = () => {
     }
   }
 
+  function handleShowCart() {
+    dispatch(toggleCartVisibility({}));
+  }
+
   return (
     <S.Header>
       <S.Container>
@@ -41,12 +42,11 @@ export const Header: React.FC = () => {
             {isLogged ? <FiLogOut /> : <FiLogIn />}
           </S.AuthButton>
 
-          <S.CartButton onClick={() => setShowCart(!showCart)}>
+          <S.CartButton onClick={handleShowCart}>
             <FiShoppingCart />
           </S.CartButton>
         </S.ButtonsContainer>
       </S.Container>
-      <Cart showCart={showCart} />
     </S.Header>
   );
 };

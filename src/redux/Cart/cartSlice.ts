@@ -3,10 +3,12 @@ import { Product } from "../../components/ProductList/ProductList";
 
 interface CartState {
   cart: Product[];
+  showCart: boolean;
 }
 
 const initialState: CartState = {
   cart: [],
+  showCart: false,
 };
 
 export const cartSlice = createSlice({
@@ -23,7 +25,11 @@ export const cartSlice = createSlice({
       );
       state.cart = cartFiltered;
     },
+    toggleCartVisibility: (state, action) => {
+      state.showCart = !state.showCart;
+    },
   },
 });
 
-export const { addProduct, removeProduct } = cartSlice.actions;
+export const { addProduct, removeProduct, toggleCartVisibility } =
+  cartSlice.actions;
