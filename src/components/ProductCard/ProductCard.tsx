@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
 import { Product } from "../ProductList/ProductList";
 import { AiFillStar, AiOutlineStar } from "react-icons/ai";
-import { RootReducer, rootReducer } from "../../redux/root-reducer";
+import { RootReducer } from "../../redux/root-reducer";
 import {
   addProduct,
   removeProduct,
@@ -14,7 +14,7 @@ interface ProductCardProps {
 }
 
 export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
-  const { cart } = useSelector(
+  const { cart, showCart } = useSelector(
     (rootReducer: RootReducer) => rootReducer.cartReducer
   );
 
@@ -24,7 +24,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
   const dispatch = useDispatch();
 
   function handleCartButton() {
-    if (cart.length == 0) {
+    if (cart.length == 0 && showCart == false) {
       dispatch(toggleCartVisibility({}));
     }
     if (!isProductOnCart) {

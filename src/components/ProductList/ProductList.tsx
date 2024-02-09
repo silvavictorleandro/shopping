@@ -30,10 +30,12 @@ export const ProductList: React.FC = () => {
   }, []);
 
   return (
-    <S.Container>
-      {produtos.map((product) => (
-        <ProductCard key={product.id} product={product} />
-      ))}
-    </S.Container>
+    <S.Main>
+      <S.Container>
+        {produtos.map((product) => (
+          <ProductCard key={product.id} product={product} />
+        ))}
+      </S.Container>
+    </S.Main>
   );
 };
