@@ -14,6 +14,7 @@ export const Card = styled.article`
   align-items: center;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
 `;
 
 export const Img = styled.img`

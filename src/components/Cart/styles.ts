@@ -7,10 +7,13 @@ interface ShowCartProps {
 export const Container = styled.aside<ShowCartProps>`
   background-color: white;
   box-shadow: -5px 0 15px rgba(0, 0, 0, 0.25);
+  display: ${(props) => (props.showCart ? "block" : "none")};
   height: 100vh;
+  overflow-y: auto;
   padding: 2rem 2rem;
-  position: fixed;
-  right: ${(props) => (props.showCart ? "0" : "-265px")};
+  position: sticky;
+  /* right: ${(props) => (props.showCart ? "0" : "-265px")}; */
+  right: 0;
   top: 0;
   transition: 0.5s;
   width: 250px;
@@ -53,4 +56,8 @@ export const ProductItemTitle = styled.li`
 
 export const ProductItemPrice = styled.strong`
   font-weight: 700;
+`;
+
+export const TotalPrice = styled.strong`
+  font-size: 1.2rem;
 `;

@@ -10,8 +10,10 @@ export default function App() {
   return (
     <Provider store={store}>
       <Header />
-      <Cart />
-      <ProductList />
+      <div style={{ display: "flex", justifyContent: "space-between" }}>
+        <ProductList />
+        <Cart />
+      </div>
       <GlobalStyles />
     </Provider>
   );

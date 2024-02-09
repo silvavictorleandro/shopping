@@ -15,6 +15,8 @@ export const Cart: React.FC = () => {
 
   const dispatch = useDispatch();
 
+  const totalPrice = cart.reduce((total, product) => total + product.price, 0);
+
   return (
     <S.Container showCart={showCart}>
       <S.Title>Carrinho</S.Title>
@@ -36,6 +38,7 @@ export const Cart: React.FC = () => {
           </S.ProductContainer>
         ))}
       </S.ProductListContainer>
+      <S.TotalPrice>Total: $ {totalPrice}</S.TotalPrice>
     </S.Container>
   );
 };
