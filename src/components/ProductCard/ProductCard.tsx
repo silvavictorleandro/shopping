@@ -36,7 +36,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
 
   return (
     <S.Card>
-      <S.Img src={product.image} />
+      <S.Img src={product.image} alt={product.description} />
       <S.Title>{product.title}</S.Title>
       <S.InfoContainer>
         <S.Rating>
