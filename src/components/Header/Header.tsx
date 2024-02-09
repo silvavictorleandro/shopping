@@ -11,6 +11,10 @@ export const Header: React.FC = () => {
     (rootReducer: RootReducer) => rootReducer.userReducer
   );
 
+  const { cart } = useSelector(
+    (rootReducer: RootReducer) => rootReducer.cartReducer
+  );
+
   const isLogged = user !== null;
 
   const dispatch = useDispatch();
@@ -43,7 +47,7 @@ export const Header: React.FC = () => {
           </S.AuthButton>
 
           <S.CartButton onClick={handleShowCart}>
-            <FiShoppingCart />
+            <FiShoppingCart /> {cart.length == 0 ? "" : `${cart.length}`}
           </S.CartButton>
         </S.ButtonsContainer>
       </S.Container>
