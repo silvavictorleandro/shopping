@@ -38,7 +38,11 @@ export const Cart: React.FC = () => {
           </S.ProductContainer>
         ))}
       </S.ProductListContainer>
-      <S.TotalPrice>Total: $ {totalPrice}</S.TotalPrice>
+      <S.TotalPrice totalPrice={totalPrice}>
+        {totalPrice != 0
+          ? `Total: $ ${totalPrice}`
+          : "Seu carrinho está vazio!"}
+      </S.TotalPrice>
     </S.Container>
   );
 };

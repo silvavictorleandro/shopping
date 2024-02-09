@@ -4,6 +4,10 @@ interface ShowCartProps {
   showCart: boolean;
 }
 
+interface TotalPriceProps {
+  totalPrice: number;
+}
+
 export const Container = styled.aside<ShowCartProps>`
   background-color: white;
   box-shadow: -5px 0 15px rgba(0, 0, 0, 0.25);
@@ -12,10 +16,8 @@ export const Container = styled.aside<ShowCartProps>`
   overflow-y: auto;
   padding: 2rem 2rem;
   position: sticky;
-  /* right: ${(props) => (props.showCart ? "0" : "-265px")}; */
   right: 0;
   top: 0;
-  transition: 0.5s;
   width: 250px;
 `;
 
@@ -58,6 +60,7 @@ export const ProductItemPrice = styled.strong`
   font-weight: 700;
 `;
 
-export const TotalPrice = styled.strong`
+export const TotalPrice = styled.strong<TotalPriceProps>`
+  font-weight: ${(props) => (props.totalPrice != 0 ? "700" : "500")};
   font-size: 1.2rem;
 `;
