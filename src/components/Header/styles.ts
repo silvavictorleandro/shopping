@@ -5,6 +5,7 @@ interface AuthButtonProps {
 }
 export const Header = styled.header`
   background-color: #3b3b58;
+  padding: 0 1rem;
 `;
 
 export const Container = styled.div`
