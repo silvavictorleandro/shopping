@@ -9,7 +9,7 @@ export const Card = styled.article`
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
   padding: 1.2rem;
-  width: 300px;
+  width: 250px;
 
   align-items: center;
   display: flex;
@@ -19,8 +19,8 @@ export const Card = styled.article`
 
 export const Img = styled.img`
   object-fit: contain;
-  height: 400px;
-  width: 250px;
+  height: 300px;
+  width: 200px;
 `;
 
 export const Title = styled.h2`

@@ -19,6 +19,13 @@ export const Container = styled.aside<ShowCartProps>`
   right: 0;
   top: 0;
   width: 250px;
+
+  @media (max-width: 550px) {
+    align-items: center;
+    display: ${(props) => (props.showCart ? "flex" : "none")};
+    flex-direction: column;
+    width: 100%;
+  }
 `;
 
 export const Title = styled.h2``;
