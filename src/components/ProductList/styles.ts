@@ -1,10 +1,14 @@
 import styled from "styled-components";
 
+interface ShowCartProps {
+  showCart: boolean;
+}
+
 export const Main = styled.main`
   margin: 0 auto;
 `;
 
-export const Container = styled.div`
+export const Container = styled.div<ShowCartProps>`
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
@@ -21,6 +25,6 @@ export const Container = styled.div`
   }
 
   @media (max-width: 550px) {
-    display: none;
+    display: ${(props) => (props.showCart ? "none" : "")};
   }
 `;

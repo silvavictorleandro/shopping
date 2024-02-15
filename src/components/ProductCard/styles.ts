@@ -15,6 +15,10 @@ export const Card = styled.article`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
+  @media (max-width: 550px) {
+    box-shadow: none;
+  }
 `;
 
 export const Img = styled.img`

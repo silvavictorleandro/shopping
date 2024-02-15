@@ -10,6 +10,10 @@ export const GlobalStyles = createGlobalStyle`
   body {
     background-color: #f7f7f7;
     font-family: "Poppins", sans-serif;
+
+    @media (max-width: 550px) {
+      background-color: white;
+    }
   }
 
   button {

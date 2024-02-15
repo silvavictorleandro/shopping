@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { ProductCard } from "../ProductCard/ProductCard";
 import * as S from "./styles";
+import { useSelector } from "react-redux";
+import { RootReducer } from "../../redux/root-reducer";
 
 export interface Product {
   id: number;
@@ -13,6 +15,10 @@ export interface Product {
 }
 
 export const ProductList: React.FC = () => {
+  const { showCart } = useSelector(
+    (rootReducer: RootReducer) => rootReducer.cartReducer
+  );
+
   const [produtos, setProdutos] = useState<any[]>([]);
 
   const getProdutos = async () => {
@@ -31,7 +37,7 @@ export const ProductList: React.FC = () => {
 
   return (
     <S.Main>
-      <S.Container>
+      <S.Container showCart={showCart}>
         {produtos.map((product) => (
           <ProductCard key={product.id} product={product} />
         ))}
