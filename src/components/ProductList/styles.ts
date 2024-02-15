@@ -6,6 +6,7 @@ interface ShowCartProps {
 
 export const Main = styled.main`
   margin: 0 auto;
+  padding-top: 3.75rem;
 `;
 
 export const Container = styled.div<ShowCartProps>`

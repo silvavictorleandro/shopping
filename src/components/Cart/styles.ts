@@ -14,7 +14,7 @@ export const Container = styled.aside<ShowCartProps>`
   display: ${(props) => (props.showCart ? "block" : "none")};
   height: 100vh;
   overflow-y: auto;
-  padding: 2rem 2rem;
+  padding: 5.75rem 2rem;
   position: sticky;
   right: 0;
   top: 0;
