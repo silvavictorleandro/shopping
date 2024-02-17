@@ -6,8 +6,12 @@ interface CartState {
   showCart: boolean;
 }
 
+const cartItemsFromStorage = localStorage.getItem("cartItems")
+  ? JSON.parse(localStorage.getItem("cartItems")!)
+  : [];
+
 const initialState: CartState = {
-  cart: [],
+  cart: cartItemsFromStorage,
   showCart: false,
 };
 
@@ -17,6 +21,7 @@ export const cartSlice = createSlice({
   reducers: {
     addProduct: (state, action) => {
       state.cart = [...state.cart, action.payload];
+      localStorage.setItem("cartItems", JSON.stringify(state.cart));
     },
     removeProduct: (state, action) => {
       const productToRemove = action.payload;
@@ -24,6 +29,7 @@ export const cartSlice = createSlice({
         (product) => product.id !== productToRemove.id
       );
       state.cart = cartFiltered;
+      localStorage.setItem("cartItems", JSON.stringify(state.cart));
     },
     toggleCartVisibility: (state, action) => {
       state.showCart = !state.showCart;
