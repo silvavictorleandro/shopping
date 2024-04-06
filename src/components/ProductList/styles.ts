@@ -10,10 +10,10 @@ export const Main = styled.main`
 `;
 
 export const Container = styled.div<ShowCartProps>`
+  align-content: flex-start;
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
-  justify-content: center;
   margin: 3rem auto;
   max-width: 900px;
 
