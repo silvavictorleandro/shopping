@@ -9,4 +9,7 @@
 
 ## Para iniciar o projeto:
 
-- yarn start
+- Para instalar as dependências</br>
+`yarn install`
+- Para iniciar o projeto</br>
+`yarn start`
